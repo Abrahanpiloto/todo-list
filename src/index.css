@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+    .overflow-anywhere {
+      overflow-wrap: anywhere;
+    }
+}
+
+@layer components {
+  .task-container {
+    @apply
+    w-[500px] 
+    min-h-[65px] 
+    bg-[#262d38] 
+    mt-1 
+    mb-1 
+    pt-2 
+    pr-4 
+    pb-2 
+    pl-5 
+    flex 
+    justify-between 
+    items-center 
+    rounded-md 
+    border-white  
+    /* cursor-pointer */
+  }
+
+  .task-container.complete {
+    background-color: blueviolet;
+    text-decoration: line-through;
+  }
+
+  /* Degradado de colores */
+  .task-container:nth-child(3n + 1) {
+    background-color: #262D38;
+  }
+
+  .task-container:nth-child(3n + 2) {
+    background-color: #33373d;
+  }
+
+  .task-container:nth-child(3n + 3) {
+    background-color: #47494b;
+  }
+}
